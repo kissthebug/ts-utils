@@ -111,17 +111,6 @@ npm test
 
 ---
 
-## 📦 Publishing
-
-1. Update version in `package.json`
-2. Build the package:
-
-```bash
-npm run build
-```
-
----
-
 ## 📜 License
 
 [MIT](./LICENSE) © kissthebug
