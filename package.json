@@ -1,6 +1,6 @@
 {
   "name": "@kissthebug/ts-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny TypeScript utilities: strings & date formatter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

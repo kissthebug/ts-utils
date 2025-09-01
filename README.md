@@ -1,0 +1,127 @@
+# @kissthebug/ts-utils
+
+Tiny **TypeScript utility library** for strings and dates.  
+Includes simple string converters (to lowercase / uppercase) and a lightweight date formatter.
+
+---
+
+## ✨ Features
+
+- ✅ Written in **TypeScript** with full type definitions
+- ✅ Supports **ESM** and **CommonJS**
+- ✅ Tiny string utilities
+- ✅ Customizable date formatting function
+- ✅ Tested with **Vitest**
+
+---
+
+## 📦 Installation
+
+```bash
+npm install @kissthebug/ts-utils
+# or
+yarn add @kissthebug/ts-utils
+# or
+pnpm add @kissthebug/ts-utils
+```
+
+---
+
+## 🚀 Usage
+
+### String utilities
+
+```ts
+import { stringToLower, stringToUpper } from "@kissthebug/ts-utils";
+
+console.log(stringToLower("HeLLo")); // "hello"
+console.log(stringToUpper("HeLLo")); // "HELLO"
+```
+
+### Date utility
+
+```ts
+import { formatDate } from "@kissthebug/ts-utils";
+
+// Default format
+console.log(formatDate("2025-08-31"));
+// -> "2025-08-31"
+
+// Custom format
+console.log(formatDate("2025-08-31T07:05:09Z", "MM/DD/YYYY HH:mm:ss"));
+// -> "08/31/2025 07:05:09"
+```
+
+---
+
+## 📚 API Reference
+
+### `stringToLower(input: unknown): string`
+
+Converts input to lowercase string.  
+Returns `""` for `null` or `undefined`.
+
+### `stringToUpper(input: unknown): string`
+
+Converts input to uppercase string.  
+Returns `""` for `null` or `undefined`.
+
+### `formatDate(input: Date | string | number, format = "YYYY-MM-DD"): string`
+
+Formats a date using simple tokens.  
+Returns `""` if input is not a valid date.
+
+**Supported tokens:**
+
+- `YYYY` – 4-digit year
+- `YY` – 2-digit year
+- `MM` – zero-padded month (01–12)
+- `M` – month (1–12)
+- `DD` – zero-padded day (01–31)
+- `D` – day (1–31)
+- `HH` – zero-padded hours (00–23)
+- `mm` – zero-padded minutes (00–59)
+- `ss` – zero-padded seconds (00–59)
+
+> ℹ️ This formatter is lightweight and does not handle locales/time zones beyond the native `Date`. For advanced needs, consider `date-fns` or `dayjs`.
+
+---
+
+## 🛠 Development
+
+Clone repo and install deps:
+
+```bash
+git clone https://github.com/your-username/@kissthebug/ts-utils.git
+cd @kissthebug/ts-utils
+npm install
+```
+
+Build:
+
+```bash
+npm run build
+```
+
+Run tests:
+
+```bash
+npm test
+```
+
+---
+
+## 📦 Publishing
+
+1. Update version in `package.json`
+2. Build the package:
+
+```bash
+npm run build
+```
+
+---
+
+## 📜 License
+
+[MIT](./LICENSE) © kissthebug
