@@ -85,6 +85,33 @@ Returns `""` if input is not a valid date.
 
 > ℹ️ This formatter is lightweight and does not handle locales/time zones beyond the native `Date`. For advanced needs, consider `date-fns` or `dayjs`.
 
+### `deepClone<T>(value: T): T`
+
+Creates a deep copy of the input value.  
+Supports objects, arrays, `Date`, `RegExp`, `Map`, `Set`, and primitives.  
+Returns a **new instance**, so modifying the clone does not affect the original.
+
+```javascript
+const original = { a: 1, nested: { b: 2 } };
+const copy = deepClone(original);
+copy.nested.b = 3;
+console.log(original.nested.b); // 2 (unchanged)
+```
+
+### `mergeObjects<T, U>(target: T, source: U): T & U`
+
+Deeply merges two objects.
+
+- For **objects** → merges properties recursively
+- For **arrays/primitives** → values from `source` overwrite `target`
+
+```javascript
+const a = { user: { name: "Alice" }, roles: ["user"] };
+const b = { user: { age: 30 }, roles: ["admin"] };
+const merged = mergeObjects(a, b);
+// { user: { name: "Alice", age: 30 }, roles: ["admin"] }
+```
+
 ---
 
 ## 🛠 Development
