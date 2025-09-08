@@ -91,7 +91,7 @@ Creates a deep copy of the input value.
 Supports objects, arrays, `Date`, `RegExp`, `Map`, `Set`, and primitives.  
 Returns a **new instance**, so modifying the clone does not affect the original.
 
-```javascript
+```ts
 const original = { a: 1, nested: { b: 2 } };
 const copy = deepClone(original);
 copy.nested.b = 3;
@@ -105,11 +105,37 @@ Deeply merges two objects.
 - For **objects** → merges properties recursively
 - For **arrays/primitives** → values from `source` overwrite `target`
 
-```javascript
+```ts
 const a = { user: { name: "Alice" }, roles: ["user"] };
 const b = { user: { age: 30 }, roles: ["admin"] };
 const merged = mergeObjects(a, b);
 // { user: { name: "Alice", age: 30 }, roles: ["admin"] }
+```
+
+### `unique<T>(arr: T[]): T[]`
+
+Removes duplicate values from an array.  
+Uses strict equality (`===`) for comparison.
+
+```ts
+unique([1, 2, 2, 3, 1]);
+// [1, 2, 3]
+
+unique(["a", "b", "a"]);
+// ["a", "b"]
+```
+
+### `chunk<T>(arr: T[], size: number): T[][]`
+
+Splits an array into chunks of the given size.  
+If `size <= 0`, returns an empty array.
+
+```ts
+chunk([1, 2, 3, 4], 2);
+// [[1, 2], [3, 4]]
+
+chunk([1, 2, 3, 4, 5], 2);
+// [[1, 2], [3, 4], [5]]
 ```
 
 ---
