@@ -1,7 +1,7 @@
 {
   "name": "@kissthebug/ts-utils",
-  "version": "0.1.3",
-  "description": "Tiny TypeScript utilities: strings & date formatter",
+  "version": "0.1.4",
+  "description": "A lightweight TypeScript utility library with common helpers for strings, dates, objects, and arrays. Includes functions like string case converters, date formatting, deep cloning, object merging, unique values, and array chunking.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
