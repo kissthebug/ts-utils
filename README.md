@@ -1,7 +1,6 @@
 # @kissthebug/ts-utils
 
-Tiny **TypeScript utility library** for strings and dates.  
-Includes simple string converters (to lowercase / uppercase) and a lightweight date formatter.
+A lightweight TypeScript utility library with common helpers for strings, dates, objects, and arrays. Includes functions like string case converters, date formatting, deep cloning, object merging, unique values, and array chunking.
 
 ---
 
