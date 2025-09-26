@@ -1,6 +1,6 @@
 {
   "name": "@kissthebug/ts-utils",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A lightweight TypeScript utility library with common helpers for strings, dates, objects, and arrays. Includes functions like string case converters, date formatting, deep cloning, object merging, unique values, and array chunking.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -21,6 +21,15 @@
     "date",
     "converter"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kissthebug/ts-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kissthebug/ts-utils/issues"
+  },
+  "homepage": "https://github.com/kissthebug/ts-utils#readme",
+  "author": "kissthebug <108880176+kissthebug@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^24.3.0",
