@@ -1,5 +1,8 @@
 # @kissthebug/ts-utils
 
+[![NPM](https://img.shields.io/npm/v/@kissthebug/ts-utils.svg?logo=npm)](https://www.npmjs.com/package/@kissthebug/ts-utils)
+[![Downloads](https://img.shields.io/npm/dt/@kissthebug/ts-utils.svg)](https://www.npmjs.com/package/@kissthebug/ts-utils)
+
 A lightweight TypeScript utility library with common helpers for strings, dates, objects, and arrays. Includes functions like string case converters, date formatting, deep cloning, object merging, unique values, and array chunking.
 
 ---
